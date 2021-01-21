@@ -12,6 +12,7 @@
     <modules>
         <module>common_utils</module>
         <module>service_base</module>
+        <module>security_filter</module>
     </modules>
 
     <artifactId>common</artifactId>
@@ -28,21 +29,6 @@
             <artifactId>lombok</artifactId>
             <scope>provided </scope>
         </dependency>
-        <!--swagger-->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <scope>provided </scope>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <scope>provided </scope>
-        </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>org.springframework.boot</groupId>-->
-        <!--            <artifactId>spring-boot-starter-data-redis</artifactId>-->
-        <!--        </dependency>-->
     </dependencies>
 
 

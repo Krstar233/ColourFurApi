@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.colourfur.chatservice.mapper.ClfMessageMapper">
+
+    <select id="getAllReceivedToBeRead" resultType="com.colourfur.chatservice.entity.ClfMessage">
+        select * from clf_message
+        where to_uid=#{receiverUid}
+            and owner_uid=#{receiverUid}
+            and read_status=0
+            and is_deleted = 0
+    </select>
+    <select id="getChatLogsWithTwoId" resultType="com.colourfur.chatservice.entity.ClfMessage">
+        select * from clf_message
+        where ((from_uid=#{myUid} and to_uid=#{otherUid})
+            or (from_uid=#{otherUid} and to_uid=#{myUid}))
+            and (owner_uid=#{myUid})
+            and is_deleted = 0
+        order by gmt_create
+    </select>
+</mapper>

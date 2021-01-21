@@ -5,17 +5,29 @@ logging:
       springframework:
         security: info
 server:
-  port: 8001
+  port: 8002
 spring:
   profiles:
     active: dev
   application:
-    name: service_security
+    name: service_chat
+  resources:
+    static-locations: classpath:static/
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/yoofur?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 12345678
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
