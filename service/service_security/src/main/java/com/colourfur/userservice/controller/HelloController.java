@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.annotations.ApiIgnore;
 
+import java.util.HashMap;
+
 @RestController
 @CrossOrigin
 public class HelloController {
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @ApiOperation("测试是否已经携带token")
     @GetMapping("/hello")

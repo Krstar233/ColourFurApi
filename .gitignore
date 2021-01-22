@@ -4,6 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### 关键配置文件 ###
+!**/src/test/**/application-*.yml
+
 ### STS ###
 .apt_generated
 .classpath

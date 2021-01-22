@@ -1,0 +1,7 @@
+aliyun:
+  oss:
+    file:
+      endpoint: oss-cn-shanghai.aliyuncs.com
+      keyid: LTAI4GDBRMU2vK3iFyaaz81Z
+      keysecret: V1qQgvPwvhtr32uRDiNnWT2uCftdWk
+      bucketname: colourfur
