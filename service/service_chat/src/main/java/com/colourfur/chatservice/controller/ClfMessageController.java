@@ -23,6 +23,7 @@ import java.util.List;
  * @since 2021-01-21
  */
 @RestController
+@CrossOrigin
 @RequestMapping("/chatservice/clf-message")
 public class ClfMessageController {
     @Autowired
