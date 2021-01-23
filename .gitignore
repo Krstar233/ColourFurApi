@@ -5,7 +5,7 @@ target/
 !**/src/test/**/target/
 
 ### 关键配置文件 ###
-!**/src/test/**/application-*.yml
+!**/src/**/application-*.yml
 
 ### STS ###
 .apt_generated
